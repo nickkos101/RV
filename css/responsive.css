@@ -1,0 +1,30 @@
+@media (max-width: 960px) {
+  iframe {
+    width: 100%;
+    margin-bottom: 25px; }
+
+  header .desktop {
+    display: none; }
+  header #responsive-nav {
+    display: block; }
+    header #responsive-nav p {
+      font-size: 14px; }
+  header #slideOut {
+    display: block; }
+
+  #breadcrumbs {
+    text-align: center; }
+
+  #logos {
+    text-align: center; } 
+  }
+
+@media (max-width: 560px) {
+    .mobile-only {display: block;}
+    #inventory .model button {display: none;}
+    .ph-number {font-size:10px;}
+    #logos {display:none;}
+    #breadcrumbs {text-align:left;}
+    }
+
+/*# sourceMappingURL=responsive.css.map */
