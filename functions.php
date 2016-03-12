@@ -65,6 +65,15 @@ function RV_tax() {
 			'hierarchical' => true,
 			)
 		);
+	register_taxonomy(
+		'years',
+		'models',
+		array(
+			'label' => __( 'Year' ),
+			'rewrite' => array( 'slug' => 'year' ),
+			'hierarchical' => true,
+			)
+		);
 }
 
 add_action('init', 'RV_tax');
@@ -78,6 +87,11 @@ function get_brand($postID) {
 function get_types($postID) {
 	$typelist =  wp_get_post_terms($postID, 'type');
 	return $typelist;
+}
+
+function get_years($postID) {
+	$yearlist = wp_get_post_terms($postID, 'years');
+	return $yearlist;
 }
 
 register_nav_menus( array(

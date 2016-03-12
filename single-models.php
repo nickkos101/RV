@@ -15,9 +15,11 @@
 				<div class="col-md-6">
 					<div class="videoWrapper">
 						<?php if ($floorplans[0]['floorplan_video']) { ?>
+						<h2 class="hidden">Floorplan Video coming soon.</h2>
 						<iframe id="modelVid" src="<?php echo $floorplans[0]['floorplan_video']; ?>/?showinfo=0&rel=0modestbranding=0" frameborder="0" allowfullscreen></iframe>
 						<?php } else { ?>
 						<h2>Floorplan Video coming soon.</h2>
+						<iframe id="modelVid" class="hidden" src="#" frameborder="0" allowfullscreen></iframe>
 						<?php	} ?>
 					</div>
 						<!-- <div class="row text-center">
@@ -44,7 +46,7 @@
 					<input type="text" placeholder="Phone Number">
 					<button>Request a Callback</button>
 				</form> -->
-				<button data-toggle="modal" data-target="#contactModal">Contact Us for More Info</button>
+				<!--<button data-toggle="modal" data-target="#contactModal">Contact Us for More Info</button>-->
 			</div>
 		</div>
 		<h2><?php echo get_brand(get_the_id())->name.' '.get_the_title(); ?> Floorplans</h2>

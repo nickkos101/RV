@@ -48,6 +48,13 @@ jQuery(document).ready(function(){
 		jQuery('#floorplan-image').attr('src', imgLink);
 		jQuery('#vidModal .planName').text(planName);
 		jQuery('.zoomLens').css('background-image', 'url(' + imgLink + ')');
+		if (jQuery('#modelVid').hasClass('hidden')) {
+			jQuery('#modelVid').removeClass('hidden');
+		}
+		if (vidLink === '/?showinfo=0&rel=0&modestbranding=0') {
+			jQuery('#modelVid').addClass('hidden');
+			jQuery('.videoWrapper h2').removeClass('hidden');
+		}
 		//console.log(vidLink);
 		//console.log(target);
 
