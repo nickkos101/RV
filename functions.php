@@ -81,21 +81,37 @@ add_action('init', 'RV_tax');
 
 function get_brand($postID) {
 	$brandlist =  wp_get_post_terms($postID, 'brands');
-	return $brandlist[0];
+	if ($brandlist) {
+		return $brandlist[0]->name;
+	}
+	else {
+		return false;
+	}
 }
 
 function get_types($postID) {
 	$typelist =  wp_get_post_terms($postID, 'type');
-	return $typelist;
+
+	if ($typelist) {
+		return $typelist;
+	}
+	else {
+		return false;
+	}
 }
 
 function get_years($postID) {
 	$yearlist = wp_get_post_terms($postID, 'years');
-	return $yearlist;
+	if ($yearlist) {
+		return $yearlist;
+	}
+	else {
+		return false;
+	}
 }
 
 register_nav_menus( array(
-'Header_Nav' => 'Header Navigation Area',
-) );
+	'Header_Nav' => 'Header Navigation Area',
+	) );
 
 ?>

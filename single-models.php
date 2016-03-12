@@ -6,7 +6,7 @@
 		<div id="breadcrumbs">
 			<div class="row">
 				<div class="col-md-12">
-					<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Manufacturers</a> / <a href=""><?php echo get_brand(get_the_id())->name; ?></a> / <?php the_title(); ?></p>
+					<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Manufacturers</a> / <a href=""><?php echo get_brand(get_the_id()); ?></a> / <?php the_title(); ?></p>
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 				<!--<button data-toggle="modal" data-target="#contactModal">Contact Us for More Info</button>-->
 			</div>
 		</div>
-		<h2><?php echo get_brand(get_the_id())->name.' '.get_the_title(); ?> Floorplans</h2>
+		<h2><?php echo get_brand(get_the_id()).' '.get_the_title(); ?> Floorplans</h2>
 	</div>
 	<div id="inventory" class="row">
 		<?php 
@@ -61,7 +61,8 @@
 				<?php } else { ?>
 				<p>Coming Soon</p>
 				<?php } ?>
-				<h3 class="planName"><?php echo $floorplan['floorplan_name']; ?></h3>
+				<h3 class="planName"><?php
+					if ($floorplan['floorplan_year']) { echo get_term_by('id', $floorplan['floorplan_year'], 'years')->name; } ?> <?php echo $floorplan['floorplan_name']; ?> <br/> <small><?php if ($floorplan['floorplan_type']) { echo get_term_by('id', $floorplan['floorplan_type'], 'type')->name; } ?></small></h3>
 				<div class="row">
 					<div class="col-xs-12">
 						<button>Inventory</button>
@@ -74,7 +75,7 @@
 		<div class="text-content">
 			<div class="row">
 				<div class="col-md-8">
-					<h3><span>About</span> <?php echo get_brand(get_the_id())->name.' '.get_the_title(); ?></h3>
+					<h3><span>About</span> <?php echo get_brand(get_the_id()).' '.get_the_title(); ?></h3>
 					<?php the_content(); ?>
 				</div>
 				<div class="col-md-4">

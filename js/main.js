@@ -1,5 +1,10 @@
 jQuery(document).ready(function(){
 
+		if (jQuery('#modelVid').attr('src') === '#') {
+			jQuery('#modelVid').addClass('hidden');
+			jQuery('.videoWrapper h2').removeClass('hidden');
+		}
+
 	jQuery(function() {
 		jQuery('a[href*="#"]:not([href="#"])').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
