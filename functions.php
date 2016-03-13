@@ -89,6 +89,17 @@ function get_brand($postID) {
 	}
 }
 
+function get_brand_slug($postID) {
+	$brandlist =  wp_get_post_terms($postID, 'brands');
+	if ($brandlist) {
+		return $brandlist[0]->slug;
+	}
+	else {
+		return false;
+	}
+}
+
+
 function get_types($postID) {
 	$typelist =  wp_get_post_terms($postID, 'type');
 

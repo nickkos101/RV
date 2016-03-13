@@ -6,7 +6,7 @@
 		<div id="breadcrumbs">
 			<div class="row">
 				<div class="col-md-12">
-					<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Manufacturers</a> / <a href=""><?php echo get_brand(get_the_id()); ?></a> / <?php the_title(); ?></p>
+					<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Manufacturers</a> / <a href="<?php echo get_site_url(); ?>/brand/<?php echo get_brand_slug(get_the_id()); ?>"><?php echo get_brand(get_the_id()); ?></a> / <?php the_title(); ?></p>
 				</div>
 			</div>
 		</div>
@@ -15,10 +15,10 @@
 				<div class="col-md-6">
 					<div class="videoWrapper">
 						<?php if ($floorplans[0]['floorplan_video']) { ?>
-						<h2 class="hidden">Floorplan Video coming soon.</h2>
+						<p class="hidden">Video Coming! <br/> Click Inventory to see more information and exit the library.</p>
 						<iframe id="modelVid" src="<?php echo $floorplans[0]['floorplan_video']; ?>/?showinfo=0&rel=0modestbranding=0" frameborder="0" allowfullscreen></iframe>
 						<?php } else { ?>
-						<h2>Floorplan Video coming soon.</h2>
+						<p>Video Coming! <br/> Click Inventory to see more information and exit the library.</p>
 						<iframe id="modelVid" class="hidden" src="#" frameborder="0" allowfullscreen></iframe>
 						<?php	} ?>
 					</div>
@@ -39,7 +39,7 @@
 						<?php if ($floorplans[0]['floorplan_image']) { ?>
 						<img id="floorplan-image" src="<?php echo $floorplans[0]['floorplan_image']; ?>" data-zoom-image="<?php echo $floorplans[0]['floorplan_image']; ?>">
 						<?php } else { ?>
-						<p>Floorplan Image not availible, coming soon.</p>
+						<p>Illustration not availible <br/> (Click to watch video)</p>
 						<?php } ?>
 				<!--<form class="callback-cta">
 					<input type="text" placeholder="Your Name">
@@ -53,13 +53,13 @@
 	</div>
 	<div id="inventory" class="row">
 		<?php 
-		foreach ($floorplans as $floorplan) {
-			?>
-			<div class="col-md-3 model" data-vidlink="<?php echo $floorplan['floorplan_video']; ?>/?showinfo=0&rel=0&modestbranding=0" data-imglink="<?php echo $floorplan['floorplan_image']; ?>">
+		$i = 0;
+		foreach ($floorplans as $floorplan) { ?>
+			<div class="col-md-3 model <?php if ($i === 0) { echo 'active'; } ?>" data-vidlink="<?php echo $floorplan['floorplan_video']; ?>/?showinfo=0&rel=0&modestbranding=0" data-imglink="<?php echo $floorplan['floorplan_image']; ?>">
 				<?php if ($floorplan['floorplan_image']) { ?>
 				<img src="<?php echo $floorplan['floorplan_image']; ?>">
 				<?php } else { ?>
-				<p>Coming Soon</p>
+				<p>Illustration not availible <br/> (Click to watch video)</p>
 				<?php } ?>
 				<h3 class="planName"><?php
 					if ($floorplan['floorplan_year']) { echo get_term_by('id', $floorplan['floorplan_year'], 'years')->name; } ?> <?php echo $floorplan['floorplan_name']; ?> <br/> <small><?php if ($floorplan['floorplan_type']) { echo get_term_by('id', $floorplan['floorplan_type'], 'type')->name; } ?></small></h3>
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-			<?php } ?>
+			<?php $i++; } ?>
 		</div>
 		<p class="mobile-only text-center"><strong>Click or Swipe to See Floorplans</strong></p>
 		<div class="text-content">
