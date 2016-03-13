@@ -1,6 +1,15 @@
 <?php /* Template Name: Footage Checking App Page */ ?>
 <?php get_header(); ?>
 <main>
+	<div class="hero">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/hero.jpg">
+		<div class="overlay">
+			<h2><span>Find</span> your RV!</h2>
+			<p>Explore a video library of Recreational Vehicles.</p>
+			<a href="#types" class="btn">Learn More</a>
+		</div>
+		<a class="btn" href="#types">Explore Library <br/> <i class="fa fa-angle-down"></i></a>
+	</div>
 	<div class="container brands-page">
 		<div id="types">
 			<div class="row">

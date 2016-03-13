@@ -10,7 +10,9 @@
 		</div>
 		<div id="brands">
 			<div class="row">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php 
+				query_posts($query_string . '&orderby=title&order=ASC');
+				if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="col-xs-6 col-md-4 text-center">
 					<a href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ) {
