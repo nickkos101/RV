@@ -17,38 +17,21 @@
 	</script>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>> 
 	<header>
 		<div id="nav" class="shadow">
 			<div class="container desktop">
-				<div class="col-md-3">
-					<a href="<?php echo get_site_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png"></a>
+				<div class="col-md-5">
+					<a target="_blank" href="http://www.lamesarv.com">
+					<?php	the_custom_logo(); ?>
+					</a>
 				</div>
-				<div class="col-md-9 text-right">
+				<div class="col-md-7 text-right">
 					<nav>
 						<?php wp_nav_menu(array('theme_location' => 'Header_Nav',)); ?>
 					</nav>
+					<?php get_search_form(); ?>
 				</div>
-			</div>
-			<div id="responsive-nav">
-				<div class="col-xs-4">
-					<a href="<?php echo get_site_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png"></a>
-				</div>
-				<div class="col-xs-6 text-center">
-				</div>
-				<div class="col-xs-2 text-right">
-					<span class="glyphicon glyphicon-align-justify"></span>
-				</div>
-			</div>
-			<div id="slideOut" class="shadow">
-				<nav>
-					<ul>
-						<li><a href="#">Manufacturer</a></li>
-						<li><a href="#">Brands</a></li>
-						<li><a href="#">Models</a></li>
-						<li><a href="#">Floor Plans</a></li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</header>

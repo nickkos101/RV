@@ -1,61 +1,65 @@
 <?php get_header(); ?>
 <main>
-	<div class="container brands-page">
-		<div id="types">
-			<div class="row">
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/class-a/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/class-a-icon.png">
-						<p>Class A <br/> </p>
-					</a>
-				</div>
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/class-b/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/class-b-icon.png">
-						<p>Class B <br/> </p>
-					</a>
-				</div>
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/class-c/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/class-c-icon.png">
-						<p>Class C <br/> </p>
-					</a>
-				</div>
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/travel-trailer/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/travel-trailer-icon.png">
-						<p>Travel Trailer <br/> </p>
-					</a>
-				</div>
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/5th-wheel/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/5thwheel-icon.png">
-						<p>5th Wheel <br/> </p>
-					</a>
-				</div>
-				<div class="col-md-2 col-xs-4 type">
-					<a href="<?php echo get_site_url(); ?>/type/tent-trailer/">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/tent-trailer-icon.png">
-						<p>Tent Trailer <br/> </p>
-					</a>
-				</div>
+	<div class="container">
+		<div class="text-center">
+			<a class="btn btn-block"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Watch a 2 minute video -  "How to use this library"</a>
+		</div>
+		<h4 class="text-center">Search by Types</h4>
+		<div class="row">
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/diesel/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/deisel-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/class-a/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/class-a-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/class-b/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/class-b-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/class-c/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/class-c-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/travel-trailer/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/travel-trailer-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/5th-wheel/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/5thwheel.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/tent-trailer/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/tent-trailer-icon.jpg">
+				</a>
+			</div>
+			<div class="col-md-3 col-xs-4 type">
+				<a href="<?php echo get_site_url(); ?>/type/toy-hauler/">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/toyhauler-icon.jpg">
+				</a>
 			</div>
 		</div>
-		<h4 class="text-center">Filter by Manufacturer</h4>
-		<div id="brands">
-			<div class="row">
-				<?php $brands = get_terms( 'brands', array('orderby' => 'count','hide_empty' => 1) );
-				foreach($brands as $brand) {
-					$terms = get_term($brand->term_id, 'brands');
-					?>
-					<div class="col-xs-6 col-md-3 brand">
-						<a href="<?php echo get_term_link($brand); ?>">
-							<?php echo '<img src="'.get_field('logo', $terms).'">'; ?>
-						</a>
-					</div>
-					<?php } ?>
+		<h4 class="text-center">Search by Manufacturer</h4>
+		<div class="row">
+			<?php $brands = get_terms( 'brands', array('orderby' => 'count','hide_empty' => 1) );
+			foreach($brands as $brand) :
+				$terms = get_term($brand->term_id, 'brands');
+				?>
+				<div class="col-xs-6 col-md-3 brand">
+					<a href="<?php echo get_term_link($brand); ?>">
+						<?php echo '<img src="'.get_field('logo', $terms).'">'; ?>
+					</a>
 				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
-	</main>
-	<?php get_footer(); ?>
+	</div>
+</main>
+<?php get_footer(); ?>

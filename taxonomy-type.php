@@ -4,7 +4,7 @@
 		<div id="breadcrumbs">
 			<div class="row">
 				<div class="col-md-12">
-					<p><a href="">Home</a> / <a href="">Types</a> / <a href=""><?php echo $wp_query->queried_object->name; ?></a></p>
+					<p><a href="<?php echo get_site_url(); ?>">Types</a> > <?php echo $wp_query->queried_object->name; ?></p>
 				</div>
 			</div>
 		</div>

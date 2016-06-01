@@ -1,0 +1,118 @@
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  color: red; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif; }
+
+h4 {
+  padding-bottom: 6px;
+  font-weight: bold;
+  border-bottom: 2px solid black; }
+
+h5 {
+  font-weight: bold; }
+
+input[type=text], input[type=password], input[type=email] {
+  padding: 5px 10px; }
+
+.btn, input[type=submit] {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  padding: 7px 15px;
+  margin-top: -2px; }
+
+header {
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  color: white; }
+  header #nav ul {
+    margin: 0px;
+    margin-top: 15px;
+    padding: 0px; }
+    header #nav ul li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px 15px;
+      margin: 0px 10px;
+      font-size: 16px; }
+      header #nav ul li a {
+        color: white; }
+  header #nav #searchform {
+    margin-top: 10px;
+    margin-right: 15px; }
+  header .custom-logo {
+    max-height: 110px;
+    width: auto; }
+
+main {
+  margin-top: 130px;
+  margin-bottom: 25px; }
+  main .breadcrumbs {
+    background-color: #f6f6f6;
+    margin-bottom: 15px; }
+    main .breadcrumbs p {
+      margin: 0px;
+      padding: 5px 15px; }
+
+.home .brand {
+  border-bottom: 1px solid black; }
+  .home .brand img {
+    max-width: 100%;
+    height: 136px;
+    padding: 10px 0px; }
+.home .model {
+  text-align: center; }
+  .home .model img {
+    width: auto;
+    height: 85px; }
+
+.single-models .video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  margin-bottom: 25px;
+  background-color: #000; }
+  .single-models .video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .single-models .video-wrap .overlay {
+    width: 170px;
+    height: auto;
+    position: absolute;
+    z-index: 998;
+    bottom: 25px;
+    left: 20px; }
+.single-models .slider {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  .single-models .slider .model {
+    text-align: center; }
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 25px 0px; }
+  footer a {
+    color: white; }
+
+/* Miscellaneous */
+.screen-reader-text {
+  display: none; }
+
+/*# sourceMappingURL=style-rewrite.css.map */

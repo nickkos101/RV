@@ -2,15 +2,29 @@
 
 include 'acf/acf-settings.php';
 
+
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
+
+function rv_prefix_setup() {
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => 110,
+		'flex-height' => false,
+	//	'flex-width' => true,
+	) );
+
+}
+add_action( 'after_setup_theme', 'rv_prefix_setup' );
 
 function resources() {
 	//Stylesheets
 	wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap' );
-	wp_register_style( 'style', get_template_directory_uri() . '/css/style.css' );
-	wp_enqueue_style( 'style' );
+	// wp_register_style( 'style', get_template_directory_uri() . '/css/style.css' );
+	// wp_enqueue_style( 'style' );
+	wp_register_style( 'style-rewrite', get_template_directory_uri() . '/css/style-rewrite.css' );
+	wp_enqueue_style( 'style-rewrite' );
 	wp_register_style( 'slick', get_template_directory_uri() . '/css/slick.css' );
 	wp_enqueue_style( 'slick' );
 	wp_register_style( 'slick-theme', get_template_directory_uri() . '/css/slick-theme.css' );
@@ -38,7 +52,7 @@ function RV_post_types() {
 		'has_archive' => true,
 		'rewrite' => array('slug' => 'models'),
 		'menu_icon' => 'dashicons-carrot',
-		'supports' => array('title','thumbnail'),
+		'supports' => array('title','thumbnail','editor'),
 		'taxonomies' => array('category')
 		)
 	);
@@ -124,5 +138,40 @@ function get_years($postID) {
 register_nav_menus( array(
 	'Header_Nav' => 'Header Navigation Area',
 	) );
+
+function array_sort($array, $on, $order=SORT_ASC)
+{
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+            break;
+            case SORT_DESC:
+                arsort($sortable_array);
+            break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
+}
 
 ?>

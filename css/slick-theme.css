@@ -19,9 +19,9 @@
 .slick-prev,
 .slick-next
 {
-    font-size: 0;
+    font-size: 12px;
     line-height: 0;
-    color:#fff;
+    color:#fff !important;
 
     position: absolute;
     top: 50%;
@@ -87,11 +87,11 @@
 }
 .slick-prev:before
 {
-    content: '<';
+    content: '< ';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '>';
+    content: '> ';
 }
 
 .slick-next
@@ -105,11 +105,11 @@
 }
 .slick-next:before
 {
-    content: '>';
+    content: '> ';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '<';
+    content: '< ';
 }
 
 /* Dots */
