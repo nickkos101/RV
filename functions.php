@@ -11,6 +11,17 @@ add_theme_support( 'custom-logo', array(
 	'flex-width' => true,
 ) );
 
+function rv_prefix_setup() {
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => 110,
+		'flex-height' => false,
+	//	'flex-width' => true,
+	) );
+
+}
+add_action( 'after_setup_theme', 'rv_prefix_setup' );
+
 function resources() {
 	//Stylesheets
 	wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
@@ -209,4 +220,42 @@ function array_sort($array, $on, $order=SORT_ASC)
 	return $new_array;
 }
 
+<<<<<<< HEAD
+=======
+function array_sort($array, $on, $order=SORT_ASC)
+{
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+            break;
+            case SORT_DESC:
+                arsort($sortable_array);
+            break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
+}
+
+>>>>>>> origin/master
 ?>

@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 @media (max-width: 768px) {
   header ul li {
     display: block; } }
+=======
+@media (max-width: 960px) {
+  iframe {
+    width: 100%;
+    margin-bottom: 25px; }
+
+  header #responsive-nav {
+    display: block; }
+    header #responsive-nav p {
+      font-size: 14px; }
+  header #slideOut {
+    display: block; }
+  header .desktop {
+    display: none; }
+
+  #breadcrumbs {
+    text-align: center; }
+
+  #logos {
+    text-align: center; } }
+>>>>>>> origin/master
 
 /*# sourceMappingURL=responsive.css.map */

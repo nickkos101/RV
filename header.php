@@ -20,6 +20,7 @@
 	<?php wp_head(); ?>
 	<?php get_template_part('/modules/style', 'compiler'); ?>
 </head>
+<<<<<<< HEAD
 <body <?php body_class(); ?>>
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -36,4 +37,23 @@
 				</div>
 			</div>
 		</nav>
+=======
+<body <?php body_class(); ?>> 
+	<header>
+		<div id="nav" class="shadow">
+			<div class="container desktop">
+				<div class="col-md-5">
+					<a target="_blank" href="http://www.lamesarv.com">
+					<?php	the_custom_logo(); ?>
+					</a>
+				</div>
+				<div class="col-md-7 text-right">
+					<nav>
+						<?php wp_nav_menu(array('theme_location' => 'Header_Nav',)); ?>
+					</nav>
+					<?php get_search_form(); ?>
+				</div>
+			</div>
+		</div>
+>>>>>>> origin/master
 	</header>

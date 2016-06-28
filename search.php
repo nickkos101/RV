@@ -10,7 +10,11 @@
 		</div>
 		<div id="brands">
 			<div class="row">
+<<<<<<< HEAD
 				<?php
+=======
+				<?php 
+>>>>>>> origin/master
 				query_posts($query_string . '&orderby=title&order=ASC');
 				if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="col-xs-6 col-md-4 text-center">
@@ -26,4 +30,8 @@
 	</div>
 </div>
 </main>
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> origin/master

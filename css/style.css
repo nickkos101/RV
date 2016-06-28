@@ -131,7 +131,11 @@ main {
   font-family: 'Lato', sans-serif;
   padding: 15px 0px;
   padding-bottom: 0px;
+<<<<<<< HEAD
   font-size: 22px; }
+=======
+  font-size: 18px; }
+>>>>>>> origin/master
 
 #content h2 {
   text-align: center;

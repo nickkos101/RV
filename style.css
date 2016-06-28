@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Theme Name: Pegasus
 Theme URI: http://github.com/nickkos101
@@ -11,3 +12,327 @@ Tags: RVS
 Text Domain: Pegasus
 
 */
+=======
+/* Settings */
+/* Base Settings */
+img {
+  max-width: 100%; }
+
+a {
+  color: #000; }
+
+iframe {
+  max-width: 100%; }
+
+button, .btn {
+  border: none; }
+
+*:focus {
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold; }
+
+h2 {
+  font-size: 22px; }
+
+table th {
+  font-size: 20px;
+  padding: 5px; }
+table td {
+  padding: 2px;
+  border: 1px solid #000; }
+table .fp {
+  font-size: 12px;
+  text-align: center; }
+
+/* Supplementary */
+.shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); }
+
+/* Header */
+header #nav {
+  background-color: #000;
+  padding: 0 25px;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+  width: 100%; }
+  header #nav a {
+    color: white; }
+  header #nav button {
+    margin-left: 25px;
+    background-color: #FFF200;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    padding: 5px 15px; }
+  header #nav p {
+    vertical-align: middle;
+    padding-top: 10px; }
+header nav ul {
+  margin: 15px 0px;
+  padding: 0px;
+  list-style: none; }
+  header nav ul li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold; }
+  header nav ul li:last-of-type {
+    padding-right: 0px; }
+header #responsive-nav {
+  display: none;
+  background-color: #006F53;
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 20px;
+  z-index: 99; }
+  header #responsive-nav p {
+    margin: 0px;
+    padding: 0px; }
+header #slideOut {
+  width: 320px;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 48px;
+  right: -320px;
+  z-index: 99;
+  display: none; }
+  header #slideOut nav ul li {
+    display: block; }
+    header #slideOut nav ul li a {
+      color: #fff; }
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 0px;
+  margin-top: 25px; }
+  footer p {
+    padding: 0px;
+    margin: 0px; }
+  footer a {
+    color: #fff !important; }
+
+/* Page Stuff */
+main {
+  margin-top: 77px; }
+
+#logos {
+  padding: 15px 0px;
+  background-color: #FBFBFB;
+  margin-top: 45px; }
+  #logos img {
+    max-height: 80px; }
+  #logos .modelNumber {
+    margin: 0px;
+    padding-top: 35px; }
+
+#breadcrumbs {
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  padding: 15px 0px;
+  padding-bottom: 0px;
+  font-size: 18px; }
+
+#content h2 {
+  text-align: center;
+  padding: 15px 0px; }
+#content button {
+  font-size: 18px;
+  margin-top: 35px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px; }
+
+#inventory .model {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  #inventory .model h3 {
+    font-weight: 100;
+    font-size: 18px; }
+  #inventory .model p {
+    padding: 52px 0px;
+    margin: 0px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold; }
+  #inventory .model button {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #000;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block; }
+#inventory .model.active img {
+  border: 1px solid red; }
+
+.text-content h3 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 15px; }
+.text-content p {
+  line-height: 18px; }
+
+.mobile-only {
+  display: none; }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  margin-bottom: 25px;
+  background-color: #000; }
+  .videoWrapper .overlay {
+    width: 170px;
+    height: auto;
+    position: absolute;
+    z-index: 9999;
+    bottom: 20px;
+    left: 20px; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.videoWrapper p {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 120px 0px; }
+
+video#bgvid {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  position: relative; }
+
+#searchform {
+  text-align: center; }
+  #searchform input[type=text] {
+    padding: 10px 15px;
+    font-size: 20px; }
+  #searchform button {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    padding: 12px 35px; }
+
+#types p {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+  font-weight: bold; }
+
+.type {
+  text-align: center; }
+
+.type img {
+  padding-top: 25px; }
+
+.type.active {
+  background-color: #f8f8f8; }
+
+.brands-page h4 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px; }
+
+.brand {
+  border-bottom: 1px solid #000;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.bar-right {
+  border-right: 3px solid #000; }
+
+.bar-left {
+  border-left: 3px solid #000; }
+
+.padme {
+  padding-top: 15px;
+  font-size: 18px; }
+
+.ph-number {
+  font-size: 10px !important; }
+
+.hero {
+  position: relative;
+  text-align: center; }
+  .hero img {
+    min-width: 100%;
+    height: auto; }
+  .hero .overlay {
+    position: absolute;
+    right: 45px;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    color: #fff;
+    text-align: left; }
+    .hero .overlay h2 {
+      text-transform: uppercase;
+      font-family: Impact;
+      font-weight: normal;
+      font-style: italic;
+      letter-spacing: 0.05em;
+      font-size: 38px;
+      margin: 0px; }
+    .hero .overlay p {
+      font-family: "Roboto", sans-serif;
+      padding: 10px 0px; }
+    .hero .overlay .btn {
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      background-color: #E70E0E;
+      border: none;
+      border-radius: 0px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 5px 10px;
+      margin-left: 0px; }
+  .hero .btn {
+    background-color: #E70E0E;
+    margin-left: -89px;
+    padding: 5px 35px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0px;
+    line-height: 18px; }
+    .hero .btn i.fa {
+      font-size: 22px; }
+  .hero span {
+    color: #E70E0E; }
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> origin/master

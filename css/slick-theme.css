@@ -22,6 +22,10 @@
     font-size: 12px;
     line-height: 0;
     color:#fff !important;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     position: absolute;
     top: 50%;
     z-index: 99;
@@ -101,7 +105,11 @@
 }
 .slick-next:after
 {
+<<<<<<< HEAD
     content: ' >';
+=======
+    content: '> ';
+>>>>>>> origin/master
 }
 [dir='rtl'] .slick-next:before
 {

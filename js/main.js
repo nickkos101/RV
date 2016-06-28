@@ -26,7 +26,11 @@ jQuery(document).ready(function($){
 		var vidLink = $(this).attr('data-vidlink');
 		var target = $('#modelVid').attr('src', vidLink);
 		var imgLink = $(this).attr('data-imglink');
+<<<<<<< HEAD
 		var planName = $(this).find('h5').text();
+=======
+		var planName = $(this).find('h3').text();
+>>>>>>> origin/master
 		$('#floorplan-image').attr('src', imgLink);
 		$('.floorplanName').text(planName);
 		$('.zoomLens').css('background-image', 'url(' + imgLink + ')');
