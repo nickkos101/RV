@@ -1,19 +1,9 @@
-@media (max-width:960px) {
-
-	iframe {width:100%; margin-bottom:25px;}
-
-	header { 
-		#nav {display:none;}
-		#responsive-nav {
-			display:block;
-			p {font-size:14px;}
-		}
-		#slideOut {display:block;}
-	}
-
-	#breadcrumbs {text-align:center;}
-
-	#logos {
-		text-align: center;
-	}
+@media (max-width:768px) {
+  header {
+    ul {
+      li {
+        display: block;
+      }
+    }
+  }
 }

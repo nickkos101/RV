@@ -41,11 +41,15 @@ include_once( IRIS_URL . '/acf/acf.php' );
 //5. Add an options page
 
 if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page();
+	acf_add_options_page('Design Options');
+	acf_add_options_page('Content Options');
 }
 
 
 //6. Get FieldSets
 include_once( IRIS_URL . '/acf/model-info.php' );
 include_once( IRIS_URL . '/acf/brand-info.php' );
+include_once( IRIS_URL . '/acf/type-info.php' );
+include_once( IRIS_URL . '/acf/content-info.php' );
+include_once( IRIS_URL . '/acf/design-info.php' );
 ?>

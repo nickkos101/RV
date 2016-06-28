@@ -40,44 +40,44 @@ table {
 
 /* Header */
 
-header { 
+header {
 
 	#nav {
-		background-color:$primaryColor; 
-		padding:0 25px; 
-		color:white; 
+		background-color:$primaryColor;
+		padding:0 25px;
+		color:white;
 		position:fixed;
-		z-index:999; 
-		top:0px; 
-		left:0px; 
+		z-index:999;
+		top:0px;
+		left:0px;
 		width:100%;
 
 		a {color:white;}
 
 		button {
-			margin-left:25px; 
-			background-color:#FFF200; 
-			color:#000; 
-			border:none; 
-			font-weight:bold; 
+			margin-left:25px;
+			background-color:#FFF200;
+			color:#000;
+			border:none;
+			font-weight:bold;
 			padding:5px 15px;
 		}
 
 		p {
-			vertical-align:middle; 
+			vertical-align:middle;
 			padding-top:10px;
 		}
 	}
 	nav ul {
-		margin:15px 0px; 
-		padding:0px; 
+		margin:15px 0px;
+		padding:0px;
 		list-style:none;
 
 		li {
-			display:inline-block; 
-			vertical-align:top; 
-			padding:10px 20px; 
-			font-size:18px; 
+			display:inline-block;
+			vertical-align:top;
+			padding:10px 20px;
+			font-size:18px;
 			font-weight:bold;
 		}
 
@@ -87,12 +87,12 @@ header {
 	}
 
 	#responsive-nav {
-		display:none; 
-		background-color:#006F53; 
-		color:#fff; 
-		position:fixed; 
-		top:0px; 
-		left:0px; 
+		display:none;
+		background-color:#000;
+		color:#fff;
+		position:fixed;
+		top:0px;
+		left:0px;
 		width:100%;
 		padding:10px 0px;
 		font-size:20px;
@@ -131,14 +131,18 @@ header {
 /* Footer */
 
 footer {
-	background-color:$primaryColor; 
-	color:#fff; 
+	background-color:$primaryColor;
+	color:#fff;
 	padding:15px 0px;
 	margin-top:25px;
 
 	p {
 		padding:0px;
 		margin:0px;
+	}
+
+	a {
+		color:#fff !important;
 	}
 }
 
@@ -147,8 +151,8 @@ footer {
 main {margin-top: 77px;}
 
 #logos {
-	padding:15px 0px; 
-	background-color:#FBFBFB; 
+	padding:15px 0px;
+	background-color:#FBFBFB;
 	margin-top:45px;
 
 	img {max-height:80px;}
@@ -160,8 +164,8 @@ main {margin-top: 77px;}
 }
 
 #breadcrumbs {
-	font-weight:100; 
-	font-family:'Lato', sans-serif; 
+	font-weight:100;
+	font-family:'Lato', sans-serif;
 	padding:15px 0px;
 	padding-bottom:0px;
 	font-size:18px;
@@ -176,10 +180,10 @@ main {margin-top: 77px;}
 
 	button {
 		font-size:18px;
-		margin-top:35px; 
-		font-weight:bold; 
-		background-color:$primaryColor; 
-		color:#fff; 
+		margin-top:35px;
+		font-weight:bold;
+		background-color:$primaryColor;
+		color:#fff;
 		padding:10px 25px;
 	}
 }
@@ -204,14 +208,14 @@ main {margin-top: 77px;}
 		}
 
 		button {
-			font-size:14px; 
-			font-weight:bold; 
-			background-color:$primaryColor; 
-			color:white; 
-			padding:10px 25px; 
+			font-size:14px;
+			font-weight:bold;
+			background-color:$primaryColor;
+			color:white;
+			padding:10px 25px;
 			border:none;
 			margin-top:10px;
-			margin-right:10px; 
+			margin-right:10px;
 			display:inline-block;
 		}
 	}
@@ -237,6 +241,15 @@ main {margin-top: 77px;}
 	height: 0;
 	margin-bottom:25px;
 	background-color: #000;
+
+	.overlay {
+		width: 170px;
+		height: auto;
+		position: absolute;
+		z-index: 998;
+		bottom: 25px;
+		left: 20px;
+	}
 }
 .videoWrapper iframe {
 	position: absolute;
@@ -253,7 +266,7 @@ main {margin-top: 77px;}
 	padding:120px 0px;
 }
 
-video#bgvid { 
+video#bgvid {
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
@@ -296,7 +309,7 @@ video#bgvid {
 	background-color:#f8f8f8;
 }
 
-.brands-page h4 {border-bottom:1px solid #000; padding-bottom: 10px;}
+.brands-page h4 {border-bottom:2px solid #000; padding-bottom: 10px;}
 
 .brand {border-bottom:1px solid #000; padding-top:15px; padding-bottom:15px;}
 .bar-right {border-right:3px solid #000;}

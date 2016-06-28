@@ -19,17 +19,13 @@
 .slick-prev,
 .slick-next
 {
-    font-size: 0;
+    font-size: 12px;
     line-height: 0;
-    color:#fff;
-
+    color:#fff !important;
     position: absolute;
     top: 50%;
     z-index: 99;
-
     display: block;
-    background-color:#e70e0e;
-
     padding: 5px 10px;
     padding-bottom:12px;
     margin-top: -10px\9; /*lte IE 8*/
@@ -64,7 +60,7 @@
 }
 
 .slick-prev:before,
-.slick-next:before
+.slick-next:after
 {
     font-family: 'slick';
     font-size: 20px;
@@ -87,11 +83,11 @@
 }
 .slick-prev:before
 {
-    content: '<';
+    content: '< ';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '>';
+    content: '> ';
 }
 
 .slick-next
@@ -103,13 +99,13 @@
     right: auto;
     left: 0px;
 }
-.slick-next:before
+.slick-next:after
 {
-    content: '>';
+    content: ' >';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '<';
+    content: '< ';
 }
 
 /* Dots */

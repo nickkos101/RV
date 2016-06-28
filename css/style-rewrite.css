@@ -1,0 +1,182 @@
+img {
+  max-width: 100%;
+  height: auto; }
+  
+  .brand img {
+  	height:156px !important;
+  }
+
+  a {
+    color: red; }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Roboto", sans-serif; }
+
+      h4 {
+        padding-bottom: 6px;
+        font-weight: bold;
+        border-bottom: 2px solid black; }
+
+        h5 {
+          font-weight: bold; }
+
+          table {
+            width: 100%; }
+            table td {
+              border: 1px solid #000;}
+              table th {
+                padding:0px 0px;
+                text-align:center;
+              }
+
+              input[type=text], input[type=password], input[type=email] {
+                padding: 5px 10px;
+                color: #000; }
+
+                .btn, input[type=submit], button {
+                  background-color: red;
+                  color: white;
+                  border: none;
+                  border-radius: 2px;
+                  text-align: center;
+                  font-weight: bold;
+                  padding: 7px 15px;
+                  white-space: normal;
+                }
+
+                header {}
+                header .navbar {
+                  margin-bottom: 0px;
+                  background-color: #000;
+                  color: white;
+                }
+                header .navbar-collapse {
+                  border-top: none;
+                  -webkit-box-shadow: none;
+                  box-shadow: none; }
+                  header .navbar-default {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border: none; }
+                    header ul {
+                      margin: 0px;
+                      margin-top: 15px;
+                      padding: 0px; }
+                      header ul li {
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 10px 15px;
+                        margin: 0px 10px;
+                        font-size: 16px; }
+                        header ul li a {
+                          color: white; }
+                          header #searchform {
+                            margin-top: 10px;
+                            margin-right: 15px; }
+                            header .custom-logo {
+                              max-height: 110px;
+                              width: auto; }
+
+                              @media(max-width: 480px) {
+                                header .custom-logo {
+                                  max-height:45px;
+                                  padding-left:15px;
+                                }
+                                main {
+                                  margin-top:75px !important;
+                                }
+                                .brand img, .model img, .type img {
+                                  height:auto !important;
+                                  max-height: 53px !important;
+                                }
+                              }
+
+                              main {
+                                margin-top: 130px;
+                                margin-bottom: 25px; }
+                                main .breadcrumbs {
+                                  background-color: #f6f6f6;
+                                  margin: 15px 0px; }
+                                  main .breadcrumbs p {
+                                    margin: 0px;
+                                    padding: 5px 15px;
+                                    font-size:18px;
+                                  }
+
+                                    .home .model {
+                                      text-align: center; }
+                                      .home .model img {
+                                        width: auto;
+                                        height: 85px; }
+
+                                        .brand, .model, .type {
+                                          }
+                                          .brand h4, .model h4, .type h4 {
+                                            border-bottom: none; }
+                                            .brand img, .model img, .type img {
+                                              max-width: 100%;
+                                              width: auto;
+                                              padding: 10px 0px; }
+
+                                              .single-models .video-wrap {
+                                                position: relative;
+                                                padding-bottom: 56.25%;
+                                                /* 16:9 */
+                                                height: 0;
+                                                margin-bottom: 25px;
+                                                background-color: #000; }
+                                                .single-models .video-wrap iframe {
+                                                  position: absolute;
+                                                  top: 0;
+                                                  left: 0;
+                                                  width: 100%;
+                                                  height: 100%; }
+                                                  .single-models .video-wrap .overlay {
+                                                    width: 170px;
+                                                    height: auto;
+                                                    position: absolute;
+                                                    z-index: 998;
+                                                    bottom: 15px;
+                                                    right: 20px; }
+                                                    .single-models .slider {
+                                                      margin-top: 15px;
+                                                      margin-bottom: 25px; }
+                                                      .single-models .slider .model {
+                                                        text-align: center;
+                                                        border-bottom: none; }
+                                                        .single-models .slider .model h5 {
+                                                          margin-top: 0px; }
+                                                          .single-models .slider .model img {
+                                                            display: inline-block; }
+
+                                                            footer {
+                                                              background-color: #000;
+                                                              color: white;
+                                                              padding: 25px 0px; }
+                                                              footer ul {
+                                                                margin: 0px;
+                                                                padding: 0px;
+                                                                list-style: none; }
+                                                                footer ul li {
+                                                                  font-size: 18px; }
+                                                                  footer ul li i.fa {
+                                                                    text-align: center;
+                                                                    min-width: 28px;
+                                                                    margin-right: 5px; }
+                                                                    footer a {
+                                                                      color: white; }
+
+                                                                      /* Miscellaneous */
+                                                                      .screen-reader-text {
+                                                                        display: none; }
+
+                                                                        .acf-map {
+                                                                          width: 100%;
+                                                                          height: 180px;
+                                                                          border: #ccc solid 1px; }
+
+                                                                          /* fixes potential theme css conflict */
+                                                                          .acf-map img {
+                                                                            max-width: inherit !important; }
+
+                                                                            /*# sourceMappingURL=style-rewrite.css.map */
