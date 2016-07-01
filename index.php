@@ -55,7 +55,6 @@
 			<div class="col-md-3 col-xs-4 type">
 				<a href="<?php echo get_site_url(); ?>/type/toy-hauler/">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/toyhauler-icon.jpg">
->>>>>>> origin/master
 				</a>
 			</div>
 		<?php endforeach; ?>
